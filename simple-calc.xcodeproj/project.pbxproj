@@ -14,6 +14,7 @@
 		9D08CB8B1EA1678F00E9B488 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D08CB891EA1678F00E9B488 /* LaunchScreen.storyboard */; };
 		9D08CB961EA1678F00E9B488 /* simple_calcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D08CB951EA1678F00E9B488 /* simple_calcTests.swift */; };
 		9D08CBA11EA1678F00E9B488 /* simple_calcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D08CBA01EA1678F00E9B488 /* simple_calcUITests.swift */; };
+		9DB13DF01EA410730029C025 /* roundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB13DEF1EA410730029C025 /* roundButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		9D08CB9C1EA1678F00E9B488 /* simple-calcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "simple-calcUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D08CBA01EA1678F00E9B488 /* simple_calcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simple_calcUITests.swift; sourceTree = "<group>"; };
 		9D08CBA21EA1678F00E9B488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DB13DEF1EA410730029C025 /* roundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = roundButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				9D08CB871EA1678F00E9B488 /* Assets.xcassets */,
 				9D08CB891EA1678F00E9B488 /* LaunchScreen.storyboard */,
 				9D08CB8C1EA1678F00E9B488 /* Info.plist */,
+				9DB13DEF1EA410730029C025 /* roundButton.swift */,
 			);
 			path = "simple-calc";
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D08CB831EA1678F00E9B488 /* ViewController.swift in Sources */,
+				9DB13DF01EA410730029C025 /* roundButton.swift in Sources */,
 				9D08CB811EA1678F00E9B488 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +511,7 @@
 				9D08CBA71EA1678F00E9B488 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D08CBA81EA1678F00E9B488 /* Build configuration list for PBXNativeTarget "simple-calcTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +520,7 @@
 				9D08CBAA1EA1678F00E9B488 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D08CBAB1EA1678F00E9B488 /* Build configuration list for PBXNativeTarget "simple-calcUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +529,7 @@
 				9D08CBAD1EA1678F00E9B488 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
