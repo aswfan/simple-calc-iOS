@@ -24,6 +24,9 @@ class RoundButton: UIButton {
         layer.cornerRadius = layer.frame.width/2
         layer.borderWidth = 1
         layer.borderColor = UIColor.gray.cgColor.copy(alpha: 0.1)
+        clipsToBounds = true
     }
+    
+    
     
 }

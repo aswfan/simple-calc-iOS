@@ -37,6 +37,21 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var result: UILabel!
     
+    @IBAction func touchDownBtn(_ sender: Any) {
+        if let btn = sender as? RoundButton {
+            btn.backgroundColor = UIColor.init(red: 32/255, green: 184/255, blue: 252/255, alpha: 0.5)
+        }
+    }
+    
+    @IBAction func touchUpBtn(_ sender: Any) {
+        if let btn = sender as? RoundButton {
+            btn.backgroundColor = UIColor.white
+            
+        }
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
