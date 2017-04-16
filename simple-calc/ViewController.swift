@@ -14,26 +14,26 @@ class ViewController: UIViewController {
     let screenHeight = UIScreen.main.bounds.height
 
     
-    @IBOutlet weak var btn1: UIButton!
-    @IBOutlet weak var btn2: UIButton!
-    @IBOutlet weak var btn3: UIButton!
-    @IBOutlet weak var btn4: UIButton!
-    @IBOutlet weak var btn5: UIButton!
-    @IBOutlet weak var btn6: UIButton!
-    @IBOutlet weak var btn7: UIButton!
-    @IBOutlet weak var btn8: UIButton!
-    @IBOutlet weak var btn9: UIButton!
-    @IBOutlet weak var btn0: UIButton!
-    @IBOutlet weak var addBtn: UIButton!
-    @IBOutlet weak var subBtn: UIButton!
-    @IBOutlet weak var mulBtn: UIButton!
-    @IBOutlet weak var didBtn: UIButton!
-    @IBOutlet weak var modBtn: UIButton!
-    @IBOutlet weak var pntBtn: UIButton!
-    @IBOutlet weak var cntBtn: UIButton!
-    @IBOutlet weak var avgBtn: UIButton!
-    @IBOutlet weak var FactBtn: UIButton!
-    @IBOutlet weak var eqlBtn: UIButton!
+    @IBOutlet weak var btn1: RoundButton!
+    @IBOutlet weak var btn2: RoundButton!
+    @IBOutlet weak var btn3: RoundButton!
+    @IBOutlet weak var btn4: RoundButton!
+    @IBOutlet weak var btn5: RoundButton!
+    @IBOutlet weak var btn6: RoundButton!
+    @IBOutlet weak var btn7: RoundButton!
+    @IBOutlet weak var btn8: RoundButton!
+    @IBOutlet weak var btn9: RoundButton!
+    @IBOutlet weak var btn0: RoundButton!
+    @IBOutlet weak var addBtn: RoundButton!
+    @IBOutlet weak var subBtn: RoundButton!
+    @IBOutlet weak var mulBtn: RoundButton!
+    @IBOutlet weak var didBtn: RoundButton!
+    @IBOutlet weak var modBtn: RoundButton!
+    @IBOutlet weak var pntBtn: RoundButton!
+    @IBOutlet weak var cntBtn: RoundButton!
+    @IBOutlet weak var avgBtn: RoundButton!
+    @IBOutlet weak var FactBtn: RoundButton!
+    @IBOutlet weak var eqlBtn: RoundButton!
     
     @IBOutlet weak var result: UILabel!
     
@@ -42,15 +42,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        roundButton(btn: button1)
         
-    }
-    
-    private func roundButton(btn: UIButton) {
-        btn.backgroundColor = .clear
-        btn.layer.cornerRadius = btn.layer.frame.width/2
-        btn.layer.borderWidth = 1
-        btn.layer.borderColor = UIColor.gray.cgColor
     }
 
     override func didReceiveMemoryWarning() {

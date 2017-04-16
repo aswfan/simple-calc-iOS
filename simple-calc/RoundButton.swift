@@ -1,5 +1,5 @@
 //
-//  roundButton.swift
+//  RoundButton.swift
 //  simple-calc
 //
 //  Created by iGuest on 4/16/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class roundButton: UIButton {
+class RoundButton: UIButton {
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -18,4 +18,12 @@ class roundButton: UIButton {
     }
     */
 
+    override func draw(_ rect: CGRect) {
+        // Drawing code
+        backgroundColor = .clear
+        layer.cornerRadius = layer.frame.width/2
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.gray.cgColor.copy(alpha: 0.1)
+    }
+    
 }
