@@ -105,7 +105,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQn-lB-50E" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
                                 <rect key="frame" x="134" y="404" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="."/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="AC">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="d1L-AP-Phi"/>
                                     <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J8I-cf-YNu"/>
@@ -183,7 +186,7 @@
                                     <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bKB-9M-LjE"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sif-PO-Xbz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sif-PO-Xbz">
                                 <rect key="frame" x="66" y="76" width="255" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -213,7 +216,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="FactBtn" destination="lVJ-0E-JHF" id="2Am-7L-IxK"/>
+                        <outlet property="acBtn" destination="lQn-lB-50E" id="Ebf-HZ-c1C"/>
                         <outlet property="addBtn" destination="vda-MR-fg2" id="3u1-u3-8Tk"/>
                         <outlet property="avgBtn" destination="Wui-8a-lq5" id="Inf-In-1nb"/>
                         <outlet property="btn0" destination="Oif-qh-CkA" id="aZS-CG-hCh"/>
@@ -227,12 +230,12 @@
                         <outlet property="btn8" destination="jmq-WH-0qD" id="6p5-Rb-eJt"/>
                         <outlet property="btn9" destination="D60-WL-h9y" id="GJJ-1i-PVe"/>
                         <outlet property="cntBtn" destination="X4E-ws-WXO" id="2MZ-8a-oZ8"/>
-                        <outlet property="didBtn" destination="NIJ-AH-ioj" id="zOK-oI-1xF"/>
+                        <outlet property="divBtn" destination="NIJ-AH-ioj" id="Fmw-WP-yHR"/>
                         <outlet property="eqlBtn" destination="bfV-Qq-tmD" id="ad8-LJ-tHe"/>
+                        <outlet property="factBtn" destination="lVJ-0E-JHF" id="n82-nz-S8f"/>
                         <outlet property="modBtn" destination="VuC-Ro-qwl" id="igR-TR-0Uo"/>
                         <outlet property="mulBtn" destination="0ME-G2-GJH" id="UQz-39-SiF"/>
-                        <outlet property="pntBtn" destination="lQn-lB-50E" id="De4-Qf-PYZ"/>
-                        <outlet property="result" destination="Sif-PO-Xbz" id="fkm-h3-FaR"/>
+                        <outlet property="resLabel" destination="Sif-PO-Xbz" id="7bi-sh-LXG"/>
                         <outlet property="subBtn" destination="ytE-MK-zWs" id="bkb-ca-C8Q"/>
                     </connections>
                 </viewController>
