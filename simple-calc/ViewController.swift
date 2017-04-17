@@ -100,7 +100,7 @@ class ViewController: UIViewController {
             value = operation(left: value, right: val, fun: fun)
             fun = mod
         case cntBtn:
-            val = value
+            value = val
         case factBtn:
             value = operation(left: value, right: val, fun: fun)
             value = fact(a: value)
