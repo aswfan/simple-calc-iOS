@@ -1,12 +1,14 @@
 ## This is 6nd assignment for INFO 449: Mobile Development: IOS (Spring 2017)
 
-Date: Apr. 18, 2017
+Date: Apr. 18 - 25, 2017
 
 ### Requirements:
 
-__Name:__ SimpleCalc-iOS Version
+- __Name:__ SimpleCalc-iOS Version 1
 
-- classic "text field and buttons" display
+Date: Apr. 18, 2017
+
+  - classic "text field and buttons" display
 
     - ten digit buttons (0, 1, 2, ... 9)
 
@@ -14,7 +16,7 @@ __Name:__ SimpleCalc-iOS Version
       
       when user enters number, then operation, then number, then equals, calculate result
 
-- Add a few new (multi-operand) operations in
+  - Add a few new (multi-operand) operations in
 
     - "count": count the number of input
       
@@ -29,10 +31,43 @@ __Name:__ SimpleCalc-iOS Version
       
       fact can only accept one number
 
-### Details
+  - Details
 
-- call this "simple-calc"
+    - call this "simple-calc"
 
-- iPhone 4.7-inch app (iPhone 6 screen), iOS 8 or 9
+    - iPhone 4.7-inch app (iPhone 6 screen), iOS 8 or 9
 
-- only changes should be to Main.storyboard and ViewController.swift
+    - only changes should be to Main.storyboard and ViewController.swift
+
+
+- __Name:__ SimpleCalc-iOS Version 2
+
+Date: Apr. 25, 2017
+
+  - extending the previous version
+
+  - support any screen size
+
+    UI should look "more or less" the same across differnt devices
+
+    meaning, buttons in roughly the same place, same relative size, etc
+
+    in other words, use AutoLayout to create a generic display
+
+  - support rotating the device
+  
+    be able to use the device in any orientation without losing state
+
+  - show a "history" view
+  
+    segue to a new screen that contains a UIScrollView
+
+    this should in turn contain UILabels as children
+
+    each label should have a "history" of the most recent calculations
+
+    display as ` 2 + 2 = 4" "4 / 4 = 1 `, and so on
+
+    have a button to return to the main display
+
+
