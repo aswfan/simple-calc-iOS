@@ -4,7 +4,7 @@ Date: Apr. 18 - 25, 2017
 
 ### Requirements:
 
-- __Name:__ SimpleCalc-iOS Version 1
+__Name:__ SimpleCalc-iOS Version 1
 
 Date: Apr. 18, 2017
 
@@ -40,7 +40,7 @@ Date: Apr. 18, 2017
     - only changes should be to Main.storyboard and ViewController.swift
 
 
-- __Name:__ SimpleCalc-iOS Version 2
+__Name:__ SimpleCalc-iOS Version 2
 
 Date: Apr. 25, 2017
 
