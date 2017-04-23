@@ -56,21 +56,11 @@ class ViewController: UIViewController {
             return
         }
         
+        let mo = mathOperation()
+        
         let btn = sender as! RoundButton
         
-        if btn === eqlBtn {
-            hlBtn?.backgroundColor = UIColor.white
-        }
-        
-        if !(btn === addBtn || btn === subBtn || btn === mulBtn || btn === divBtn
-            || btn === modBtn || btn === cntBtn || btn === avgBtn) {
-            btn.backgroundColor = UIColor.white
-        }else {
-            if !(btn === hlBtn) {
-                hlBtn?.backgroundColor = UIColor.white
-                hlBtn = btn
-            }
-        }
+        hlbuttonStatus(btn)
         
         var val = Int(resLabel.text!)!
         
@@ -85,30 +75,30 @@ class ViewController: UIViewController {
         
         switch btn {
         case avgBtn, addBtn:
-            value = operation(left: value, right: val, fun: fun)
-            fun = add
+            value = mo.operation(left: value, right: val, fun: fun)
+            fun = mo.add
         case subBtn:
-            value = operation(left: value, right: val, fun: fun)
-            fun = sub
+            value = mo.operation(left: value, right: val, fun: fun)
+            fun = mo.sub
         case mulBtn:
-            value = operation(left: value, right: val, fun: fun)
-            fun = mul
+            value = mo.operation(left: value, right: val, fun: fun)
+            fun = mo.mul
         case divBtn:
-            value = operation(left: value, right: val, fun: fun)
-            fun = div
+            value = mo.operation(left: value, right: val, fun: fun)
+            fun = mo.div
         case modBtn:
-            value = operation(left: value, right: val, fun: fun)
-            fun = mod
+            value = mo.operation(left: value, right: val, fun: fun)
+            fun = mo.mod
         case cntBtn:
             value = val
         case factBtn:
-            value = operation(left: value, right: val, fun: fun)
-            value = fact(a: value)
+            value = mo.operation(left: value, right: val, fun: fun)
+            value = mo.fact(a: value)
         case eqlBtn:
             if avg || cnt {
                 count += 1
             }
-            value = operation(left: value, right: val, fun: fun)
+            value = mo.operation(left: value, right: val, fun: fun)
         case acBtn:
             val = 0
             value = 0
@@ -152,12 +142,31 @@ class ViewController: UIViewController {
         
     }
     
+    private func hlbuttonStatus(_ btn: RoundButton) {
+        if btn === eqlBtn {
+            hlBtn?.backgroundColor = UIColor.white
+        }
+        
+        if !(btn === addBtn || btn === subBtn || btn === mulBtn || btn === divBtn
+            || btn === modBtn || btn === cntBtn || btn === avgBtn) {
+            btn.backgroundColor = UIColor.white
+        }else {
+            if !(btn === hlBtn) {
+                hlBtn?.backgroundColor = UIColor.white
+                hlBtn = btn
+            }
+        }
+    }
+    
     private func clear() {
         count = 0
         input = false
         cnt = false
         avg = false
         fun = nil
+        
+        hlbuttonStatus(eqlBtn)
+        
     }
     
     
@@ -175,57 +184,7 @@ class ViewController: UIViewController {
     }
     
     
-    private func operation(left a: Int, right b: Int, fun: ((Int, Int) -> (Bool, Int))?) -> Int {
-        if let f = fun {
-            return f(a, b).1
-        }else {
-            return b
-        }
-    }
     
-    private func add(a: Int, b: Int) -> (Bool, Int) {
-        return (true, a + b)
-    }
-    
-    private func sub(a: Int, b: Int) -> (Bool, Int) {
-        return (true, a - b)
-    }
-    
-    private func mul(a: Int, b: Int) -> (Bool, Int) {
-        return (true, a * b)
-    }
-    
-    private func div(a: Int, b: Int) -> (Bool, Int) {
-        if b == 0 {
-            print("Illegal input: Int division or modulo by zero")
-            return (false, 0)
-        }
-        return (true, a / b)
-    }
-    
-    private func mod(a: Int, b: Int) -> (Bool, Int) {
-        if b == 0 {
-            print("Illegal input: Int division or modulo by zero")
-            return (false, 0)
-        }
-        return (true, a % b)
-    }
-    
-    private func fact(a: Int) -> Int {
-        var result: Int = 1
-        for i in 1...a {
-            if !Int.multiplyWithOverflow(result, i).1 {
-                result *= i
-            }else {
-                result = 0
-                print("Error: Integer Overflow!")
-                break;
-            }
-            
-        }
-        return result
-    }
-
 
 }
 
