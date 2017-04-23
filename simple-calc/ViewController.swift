@@ -23,11 +23,18 @@ class ViewController: UIViewController {
     }
     
     var value: Int = 0
-    var count = 0
-    var input = false
+    var val = 0
+    
     var avg = false
+    var avgNum = 0
+    
     var cnt = false
+    var cntNum = 0
+    
+    var changeOperator = false
     var fun: ((Int, Int) -> (Bool, Int))? = nil
+    
+    var isSelectNumBtn = false
     
     var hlBtn: RoundButton? = nil
     
@@ -71,84 +78,95 @@ class ViewController: UIViewController {
         
         hlbuttonStatus(btn)
         
-        var val = Int(resLabel.text!)!
+//        var val = Int(resLabel.text!)!
         
-        if btn === cntBtn || btn === avgBtn {
-            if btn == cntBtn {
-                cnt = true
-            }else {
-                avg = true
-            }
-            count += 1
-        }
-        
-        switch btn {
-        case avgBtn, addBtn:
-            value = mo.operation(left: value, right: val, fun: fun)
-            fun = mo.add
-        case subBtn:
-            value = mo.operation(left: value, right: val, fun: fun)
-            fun = mo.sub
-        case mulBtn:
-            value = mo.operation(left: value, right: val, fun: fun)
-            fun = mo.mul
-        case divBtn:
-            value = mo.operation(left: value, right: val, fun: fun)
-            fun = mo.div
-        case modBtn:
-            value = mo.operation(left: value, right: val, fun: fun)
-            fun = mo.mod
-        case cntBtn:
-            value = val
-        case factBtn:
-            value = mo.operation(left: value, right: val, fun: fun)
-            value = mo.fact(a: value)
-        case eqlBtn:
-            if avg || cnt {
-                count += 1
-            }
-            value = mo.operation(left: value, right: val, fun: fun)
-        case acBtn:
+        if btn === acBtn {
+            clear()
             val = 0
-            value = 0
-            clear()
-        default:
-            if input {
-                val = 0
-            }
-            val = val * 10 + Int((btn.titleLabel?.text)!)!
+            setResult(0)
         }
-        
-        if btn === factBtn {
-            resLabel.text = String(value)
-        }else if btn === eqlBtn {
-            if avg || cnt{
-                if avg {
-                    resLabel.text = String(value/Int(count))
-                    avg = !avg
-                }else {
-                    resLabel.text = String(count)
-                    cnt = !cnt
+        else if btn === btn1 || btn === btn2 || btn === btn3 || btn === btn4 || btn === btn5 ||
+            btn === btn6 || btn === btn7 || btn === btn8 || btn === btn9 || btn === btn0 {
+            isSelectNumBtn = true
+            
+            val = val * 10  + Int ( btn.titleLabel!.text! )!
+            setResult(val)
+        }
+        else {
+            value = mo.operation(left: value, right: val, fun: fun)
+            val = 0
+            
+            if btn === eqlBtn || btn === factBtn{
+                
+                if btn === factBtn {
+                    value = mo.fact(a: val)
                 }
-                count = 0
-            }else {
-                resLabel.text = String(value)
+                else {
+                    if avg {
+                        if isSelectNumBtn {
+                            avgNum += 1
+                        }
+                        value = value/avgNum
+                    }
+                    
+                    if cnt {
+                        if isSelectNumBtn {
+                            cntNum += 1
+                        }
+                        value = cntNum
+                    }
+                }
+                setResult(value)
+                clear()
             }
-            
-            clear()
-            
-        }else {
-            resLabel.text = String(val)
+            else{
+                setResult(val)
+                
+                if btn === cntBtn || btn === avgBtn {
+                    fun = nil
+                    
+                    if btn === cntBtn {
+                        cnt = true
+                        if isSelectNumBtn {
+                            cntNum += 1
+                        }
+                    }
+                    else {
+                        avg = true
+                        if isSelectNumBtn {
+                            avgNum += 1
+                        }
+                        
+                        fun = mo.add(a:b:)
+                    }
+                }
+                else {
+                    clearNum()
+                    
+                    if btn === addBtn {
+                        fun = mo.add(a:b:)
+                    }
+                    else if btn === subBtn {
+                        fun = mo.sub(a:b:)
+                    }
+                    else if btn === mulBtn {
+                        fun = mo.mul(a:b:)
+                    }
+                    else if btn === divBtn {
+                        fun = mo.div(a:b:)
+                    }
+                    else if btn === modBtn {
+                        fun = mo.mod(a:b:)
+                    }
+
+                }
+            }
+            isSelectNumBtn = false
         }
-        
-        if btn === btn0 || btn === btn1 || btn === btn2 || btn === btn3 ||
-            btn === btn4 || btn === btn5 || btn === btn6 || btn === btn7 ||
-            btn === btn8 || btn === btn9 {
-            input = false
-        }else {
-            input = true
-        }
-        
+    }
+    
+    private func setResult(_ res: Int) {
+        resLabel.text = String(res)
     }
     
     private func hlbuttonStatus(_ btn: RoundButton) {
@@ -167,13 +185,16 @@ class ViewController: UIViewController {
         }
     }
     
-    private func clear() {
-        count = 0
-        input = false
+    private func clearNum() {
+        avgNum = 0
+        cntNum = 0
         cnt = false
         avg = false
+    }
+    
+    private func clear() {
         fun = nil
-        
+        clearNum()
         hlbuttonStatus(eqlBtn)
         
     }

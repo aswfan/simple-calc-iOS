@@ -138,20 +138,20 @@
                                                     <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V3I-JK-OdZ"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D60-WL-h9y" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                                <rect key="frame" x="80" y="0.0" width="80.5" height="81"/>
-                                                <state key="normal" title="9"/>
-                                                <connections>
-                                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="HgL-U5-3r5"/>
-                                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bMb-1O-tY8"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmq-WH-0qD" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                                <rect key="frame" x="160.5" y="0.0" width="79.5" height="81"/>
+                                                <rect key="frame" x="80" y="0.0" width="79.5" height="81"/>
                                                 <state key="normal" title="8"/>
                                                 <connections>
                                                     <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="th5-WV-zW3"/>
                                                     <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sh3-fJ-XPS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D60-WL-h9y" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
+                                                <rect key="frame" x="159.5" y="0.0" width="80.5" height="81"/>
+                                                <state key="normal" title="9"/>
+                                                <connections>
+                                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="HgL-U5-3r5"/>
+                                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bMb-1O-tY8"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ME-G2-GJH" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
@@ -184,7 +184,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQn-lB-50E" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                                <rect key="frame" x="80.5" y="0.0" width="80" height="81.5"/>
+                                                <rect key="frame" x="80.5" y="0.0" width="79.5" height="81.5"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <state key="normal" title="AC">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -195,7 +195,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VuC-Ro-qwl" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                                <rect key="frame" x="160.5" y="0.0" width="80" height="81.5"/>
+                                                <rect key="frame" x="160" y="0.0" width="80" height="81.5"/>
                                                 <state key="normal" title="%"/>
                                                 <connections>
                                                     <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="Xz4-O5-iJe"/>
@@ -203,7 +203,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIJ-AH-ioj" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                                <rect key="frame" x="240.5" y="0.0" width="79.5" height="81.5"/>
+                                                <rect key="frame" x="240" y="0.0" width="80" height="81.5"/>
                                                 <state key="normal" title="/"/>
                                                 <connections>
                                                     <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="sqx-Rz-oPa"/>

@@ -14,7 +14,12 @@ class mathOperation: NSObject {
         if let f = fun {
             return f(a, b).1
         }else {
-            return b
+            if b != 0 {
+                return b
+            }
+            else {
+                return a
+            }
         }
     }
     
