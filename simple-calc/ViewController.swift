@@ -13,6 +13,15 @@ class ViewController: UIViewController {
     let screenWidth = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
     
+    private var history_: [String] = []
+    private var operation: String = ""
+    
+    var history: [String] {
+        get {
+            return self.history
+        }
+    }
+    
     var value: Int = 0
     var count = 0
     var input = false
@@ -64,7 +73,7 @@ class ViewController: UIViewController {
         
         var val = Int(resLabel.text!)!
         
-        if btn == cntBtn || btn === avgBtn {
+        if btn === cntBtn || btn === avgBtn {
             if btn == cntBtn {
                 cnt = true
             }else {
@@ -166,6 +175,10 @@ class ViewController: UIViewController {
         fun = nil
         
         hlbuttonStatus(eqlBtn)
+        
+    }
+    
+    private func addHistory () {
         
     }
     

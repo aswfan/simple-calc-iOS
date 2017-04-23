@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,10 +26,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZTl-i5-Ue9">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sif-PO-Xbz">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                 <nil key="textColor"/>
@@ -37,10 +38,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwm-ve-bYW">
-                                        <rect key="frame" x="0.0" y="95" width="320" height="94"/>
+                                        <rect key="frame" x="0.0" y="81" width="320" height="81.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1H-Dy-enI" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="94"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="81.5"/>
                                                 <state key="normal" title="1"/>
                                                 <connections>
                                                     <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="G1z-Xt-LTi"/>
@@ -48,7 +49,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvT-CB-bCs" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                                <rect key="frame" x="80" y="0.0" width="80" height="94"/>
+                                                <rect key="frame" x="80" y="0.0" width="80" height="81.5"/>
                                                 <state key="normal" title="2"/>
                                                 <connections>
                                                     <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="WhE-JO-huY"/>
@@ -56,7 +57,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uo1-Da-SPg" userLabel="btn3" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                                <rect key="frame" x="160" y="0.0" width="80" height="94"/>
+                                                <rect key="frame" x="160" y="0.0" width="80" height="81.5"/>
                                                 <state key="normal" title="3"/>
                                                 <connections>
                                                     <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="JSB-BP-rId"/>
@@ -64,7 +65,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vda-MR-fg2" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                                <rect key="frame" x="240" y="0.0" width="80" height="94"/>
+                                                <rect key="frame" x="240" y="0.0" width="80" height="81.5"/>
                                                 <state key="normal" title="+"/>
                                                 <connections>
                                                     <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="eY3-hC-Zrb"/>
@@ -82,10 +83,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x8Y-G2-aUS">
-                                        <rect key="frame" x="0.0" y="189" width="320" height="95"/>
+                                        <rect key="frame" x="0.0" y="162.5" width="320" height="81"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CvY-Th-Uj4" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="95"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="81"/>
                                                 <state key="normal" title="4"/>
                                                 <connections>
                                                     <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="izL-KN-CXA"/>
@@ -93,7 +94,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tf-27-uX7" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                                <rect key="frame" x="80" y="0.0" width="80" height="95"/>
+                                                <rect key="frame" x="80" y="0.0" width="80" height="81"/>
                                                 <state key="normal" title="5"/>
                                                 <connections>
                                                     <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="m29-n9-HRf"/>
@@ -101,7 +102,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNW-Bv-U1S" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                                <rect key="frame" x="160" y="0.0" width="80" height="95"/>
+                                                <rect key="frame" x="160" y="0.0" width="80" height="81"/>
                                                 <state key="normal" title="6"/>
                                                 <connections>
                                                     <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="1CB-8r-TlK"/>
@@ -109,7 +110,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytE-MK-zWs" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                                <rect key="frame" x="240" y="0.0" width="80" height="95"/>
+                                                <rect key="frame" x="240" y="0.0" width="80" height="81"/>
                                                 <state key="normal" title="-"/>
                                                 <connections>
                                                     <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="PUj-j7-FuV"/>
@@ -127,10 +128,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OvY-ch-zND">
-                                        <rect key="frame" x="0.0" y="284" width="320" height="95"/>
+                                        <rect key="frame" x="0.0" y="243.5" width="320" height="81"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZb-HA-7cr" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="95"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="81"/>
                                                 <state key="normal" title="7"/>
                                                 <connections>
                                                     <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="G7e-0g-1Eo"/>
@@ -138,7 +139,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D60-WL-h9y" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                                <rect key="frame" x="80" y="0.0" width="80.5" height="95"/>
+                                                <rect key="frame" x="80" y="0.0" width="80.5" height="81"/>
                                                 <state key="normal" title="9"/>
                                                 <connections>
                                                     <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="HgL-U5-3r5"/>
@@ -146,7 +147,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmq-WH-0qD" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                                <rect key="frame" x="160.5" y="0.0" width="79.5" height="95"/>
+                                                <rect key="frame" x="160.5" y="0.0" width="79.5" height="81"/>
                                                 <state key="normal" title="8"/>
                                                 <connections>
                                                     <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="th5-WV-zW3"/>
@@ -154,7 +155,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ME-G2-GJH" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                                <rect key="frame" x="240" y="0.0" width="80" height="95"/>
+                                                <rect key="frame" x="240" y="0.0" width="80" height="81"/>
                                                 <state key="normal" title="*"/>
                                                 <connections>
                                                     <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="dix-pl-UXr"/>
@@ -172,10 +173,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTE-AI-GkL">
-                                        <rect key="frame" x="0.0" y="379" width="320" height="94"/>
+                                        <rect key="frame" x="0.0" y="324.5" width="320" height="81.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oif-qh-CkA" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="80.5" height="94"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="80.5" height="81.5"/>
                                                 <state key="normal" title="0"/>
                                                 <connections>
                                                     <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="6cC-Dj-mg3"/>
@@ -183,7 +184,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQn-lB-50E" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                                <rect key="frame" x="80.5" y="0.0" width="80" height="94"/>
+                                                <rect key="frame" x="80.5" y="0.0" width="80" height="81.5"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <state key="normal" title="AC">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -194,7 +195,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VuC-Ro-qwl" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                                <rect key="frame" x="160.5" y="0.0" width="80" height="94"/>
+                                                <rect key="frame" x="160.5" y="0.0" width="80" height="81.5"/>
                                                 <state key="normal" title="%"/>
                                                 <connections>
                                                     <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="Xz4-O5-iJe"/>
@@ -202,7 +203,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIJ-AH-ioj" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                                <rect key="frame" x="240.5" y="0.0" width="79.5" height="94"/>
+                                                <rect key="frame" x="240.5" y="0.0" width="79.5" height="81.5"/>
                                                 <state key="normal" title="/"/>
                                                 <connections>
                                                     <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="sqx-Rz-oPa"/>
@@ -220,10 +221,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yco-65-vWc">
-                                        <rect key="frame" x="0.0" y="473" width="320" height="95"/>
+                                        <rect key="frame" x="0.0" y="406" width="320" height="81"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4E-ws-WXO" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="95"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="81"/>
                                                 <state key="normal" title="Count"/>
                                                 <connections>
                                                     <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="iQK-La-Sy3"/>
@@ -231,7 +232,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wui-8a-lq5" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                                <rect key="frame" x="80" y="0.0" width="80" height="95"/>
+                                                <rect key="frame" x="80" y="0.0" width="80" height="81"/>
                                                 <state key="normal" title="Avg"/>
                                                 <connections>
                                                     <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="nDV-2f-pU0"/>
@@ -239,7 +240,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVJ-0E-JHF" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                                <rect key="frame" x="160" y="0.0" width="80" height="95"/>
+                                                <rect key="frame" x="160" y="0.0" width="80" height="81"/>
                                                 <state key="normal" title="Fact"/>
                                                 <connections>
                                                     <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="1aD-Qp-C9Q"/>
@@ -247,7 +248,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfV-Qq-tmD" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                                <rect key="frame" x="240" y="0.0" width="80" height="95"/>
+                                                <rect key="frame" x="240" y="0.0" width="80" height="81"/>
                                                 <state key="normal" title="="/>
                                                 <connections>
                                                     <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="oeI-r3-FNb"/>
@@ -264,16 +265,42 @@
                                             <constraint firstItem="Wui-8a-lq5" firstAttribute="width" secondItem="X4E-ws-WXO" secondAttribute="width" id="y2z-of-K7F"/>
                                         </constraints>
                                     </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRy-Vd-gtj">
+                                        <rect key="frame" x="0.0" y="487" width="320" height="81"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fl0-uv-lTn">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.1055222602739726" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="History"/>
+                                                <connections>
+                                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Paz-Ri-Fmc"/>
+                                                    <segue destination="lyU-iE-b5R" kind="show" id="v52-9c-eTL"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="fl0-uv-lTn" firstAttribute="leading" secondItem="aRy-Vd-gtj" secondAttribute="leading" id="V03-If-b5C"/>
+                                            <constraint firstItem="fl0-uv-lTn" firstAttribute="top" secondItem="aRy-Vd-gtj" secondAttribute="top" id="dgN-H2-FZq"/>
+                                            <constraint firstAttribute="trailing" secondItem="fl0-uv-lTn" secondAttribute="trailing" id="kSe-nU-wka"/>
+                                            <constraint firstAttribute="bottom" secondItem="fl0-uv-lTn" secondAttribute="bottom" id="xAh-0L-9Q3"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="aRy-Vd-gtj" secondAttribute="trailing" id="1zb-ru-HDG"/>
                                     <constraint firstItem="OvY-ch-zND" firstAttribute="height" secondItem="ZTl-i5-Ue9" secondAttribute="height" id="6sf-nE-poO"/>
                                     <constraint firstItem="OvY-ch-zND" firstAttribute="width" secondItem="ZTl-i5-Ue9" secondAttribute="width" id="BsT-fu-5GR"/>
+                                    <constraint firstAttribute="bottom" secondItem="aRy-Vd-gtj" secondAttribute="bottom" id="CRc-Om-7hR"/>
                                     <constraint firstItem="yco-65-vWc" firstAttribute="height" secondItem="ZTl-i5-Ue9" secondAttribute="height" id="Eh7-Bo-PhF"/>
                                     <constraint firstItem="BTE-AI-GkL" firstAttribute="height" secondItem="ZTl-i5-Ue9" secondAttribute="height" id="JMB-oS-COj"/>
                                     <constraint firstItem="x8Y-G2-aUS" firstAttribute="height" secondItem="ZTl-i5-Ue9" secondAttribute="height" id="SEi-d3-33g"/>
+                                    <constraint firstItem="aRy-Vd-gtj" firstAttribute="top" secondItem="yco-65-vWc" secondAttribute="bottom" id="TGH-R4-6NV"/>
+                                    <constraint firstItem="aRy-Vd-gtj" firstAttribute="leading" secondItem="M6Y-HF-Z3x" secondAttribute="leading" id="U2s-vE-Aak"/>
                                     <constraint firstItem="yco-65-vWc" firstAttribute="width" secondItem="ZTl-i5-Ue9" secondAttribute="width" id="VBG-7a-1yW"/>
                                     <constraint firstItem="bwm-ve-bYW" firstAttribute="width" secondItem="ZTl-i5-Ue9" secondAttribute="width" id="WuI-gR-xFX"/>
                                     <constraint firstItem="BTE-AI-GkL" firstAttribute="width" secondItem="ZTl-i5-Ue9" secondAttribute="width" id="Xxu-1Y-ufp"/>
+                                    <constraint firstItem="aRy-Vd-gtj" firstAttribute="height" secondItem="yco-65-vWc" secondAttribute="height" id="be5-hK-W1Z"/>
                                     <constraint firstItem="x8Y-G2-aUS" firstAttribute="width" secondItem="ZTl-i5-Ue9" secondAttribute="width" id="jSo-wc-Q61"/>
                                     <constraint firstItem="bwm-ve-bYW" firstAttribute="height" secondItem="ZTl-i5-Ue9" secondAttribute="height" id="tzd-BW-qGG"/>
                                 </constraints>
@@ -315,6 +342,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="22.5" y="32.74647887323944"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="uy8-hb-GQP">
+            <objects>
+                <viewController id="lyU-iE-b5R" customClass="HistoryViewController" customModule="simple_calc" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jYo-UC-h4Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="ETF-89-5PM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FTI-Hc-PBU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpJ-mr-E72">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="487"/>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xDF-w3-SEk">
+                                <rect key="frame" x="0.0" y="487" width="320" height="81"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86b-7J-MOa">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.10795697773972603" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Back"/>
+                                        <connections>
+                                            <action selector="backBtnOnClick:" destination="lyU-iE-b5R" eventType="touchUpInside" id="KGE-Wh-vYN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="86b-7J-MOa" firstAttribute="top" secondItem="xDF-w3-SEk" secondAttribute="top" id="Euu-Rh-Aom"/>
+                                    <constraint firstItem="86b-7J-MOa" firstAttribute="leading" secondItem="xDF-w3-SEk" secondAttribute="leading" id="Zq0-b4-5Zj"/>
+                                    <constraint firstAttribute="bottom" secondItem="86b-7J-MOa" secondAttribute="bottom" id="fhg-kQ-QTV"/>
+                                    <constraint firstAttribute="trailing" secondItem="86b-7J-MOa" secondAttribute="trailing" id="xSh-aI-d1i"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jpJ-mr-E72" firstAttribute="top" secondItem="FTI-Hc-PBU" secondAttribute="top" id="4Ls-4H-GOc"/>
+                            <constraint firstAttribute="trailing" secondItem="xDF-w3-SEk" secondAttribute="trailing" id="Ee8-Go-JXh"/>
+                            <constraint firstItem="xDF-w3-SEk" firstAttribute="height" secondItem="jpJ-mr-E72" secondAttribute="height" multiplier="1:6" id="PhD-5e-Ijf"/>
+                            <constraint firstItem="xDF-w3-SEk" firstAttribute="top" secondItem="jpJ-mr-E72" secondAttribute="bottom" id="byQ-C6-O8L"/>
+                            <constraint firstAttribute="trailing" secondItem="jpJ-mr-E72" secondAttribute="trailing" id="pBX-Rp-rxm"/>
+                            <constraint firstItem="jpJ-mr-E72" firstAttribute="leading" secondItem="FTI-Hc-PBU" secondAttribute="leading" id="q8Z-fV-QRk"/>
+                            <constraint firstItem="ETF-89-5PM" firstAttribute="top" secondItem="xDF-w3-SEk" secondAttribute="bottom" id="rbh-qK-gfb"/>
+                            <constraint firstItem="xDF-w3-SEk" firstAttribute="top" secondItem="jpJ-mr-E72" secondAttribute="bottom" id="wz9-jN-FZg"/>
+                            <constraint firstItem="xDF-w3-SEk" firstAttribute="leading" secondItem="FTI-Hc-PBU" secondAttribute="leading" id="zOb-0a-nG9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4tI-RX-CHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1102.5" y="43.309859154929576"/>
         </scene>
     </scenes>
 </document>

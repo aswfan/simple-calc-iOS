@@ -47,6 +47,9 @@ class mathOperation: NSObject {
     }
     
     public func fact(a: Int) -> Int {
+        if a < 1 {
+            return 0
+        }
         var result: Int = 1
         for i in 1...a {
             if !Int.multiplyWithOverflow(result, i).1 {
