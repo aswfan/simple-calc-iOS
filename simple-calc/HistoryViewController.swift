@@ -9,15 +9,27 @@
 import UIKit
 
 class HistoryViewController: UIViewController {
+    
+    var superController: ViewController?
 
+    @IBOutlet weak var stackView: UIStackView!
+    
     @IBAction func backBtnOnClick(_ sender: UIButton) {
-        
         self.dismiss(animated: true)
-        
     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let records: [String]? = superController?.history
+        if records != nil {
+            for record in records! {
+                let label = UILabel()
+                label.text = record
+                stackView.addArrangedSubview(label)
+            }
+        }
         // Do any additional setup after loading the view.
     }
 

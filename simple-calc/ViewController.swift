@@ -15,10 +15,11 @@ class ViewController: UIViewController {
     
     private var history_: [String] = []
     private var operation: String = ""
+    private var op: String = ""
     
     var history: [String] {
         get {
-            return self.history
+            return self.history_
         }
     }
     
@@ -34,7 +35,7 @@ class ViewController: UIViewController {
     var changeOperator = false
     var fun: ((Int, Int) -> (Bool, Int))? = nil
     
-    var isSelectNumBtn = false
+    var isSelectNumBtn = true
     
     var hlBtn: RoundButton? = nil
     
@@ -60,6 +61,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var eqlBtn: RoundButton!
     
     @IBOutlet weak var resLabel: UILabel!
+    
+    @IBAction func historyTouchUp(_ sender: RoundButton) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc: HistoryViewController = sb.instantiateViewController(withIdentifier: "HistoryController") as! HistoryViewController
+        
+        vc.superController = self
+        self.present(vc, animated: true, completion: nil)
+    }
     
     @IBAction func touchDownBtn(_ sender: Any) {
         if let btn = sender as? RoundButton {
@@ -87,19 +96,35 @@ class ViewController: UIViewController {
         }
         else if btn === btn1 || btn === btn2 || btn === btn3 || btn === btn4 || btn === btn5 ||
             btn === btn6 || btn === btn7 || btn === btn8 || btn === btn9 || btn === btn0 {
+            
+            if !isSelectNumBtn {
+                if operation == "" {
+                    operation += String(value)
+                }
+                operation += " " + op + " "
+            }
+            
             isSelectNumBtn = true
             
-            val = val * 10  + Int ( btn.titleLabel!.text! )!
+            let digit = btn.titleLabel!.text!
+            val = val * 10  + Int (digit)!
             setResult(val)
+            
+            operation += digit
         }
         else {
-            value = mo.operation(left: value, right: val, fun: fun)
-            val = 0
             
-            if btn === eqlBtn || btn === factBtn{
+            if isSelectNumBtn {
+                value = mo.operation(left: value, right: val, fun: fun)
+                val = 0
+            }
+            
+            if btn === eqlBtn || btn === factBtn {
                 
                 if btn === factBtn {
-                    value = mo.fact(a: val)
+                    value = mo.fact(a: value)
+                    
+                    operation += " " + btn.titleLabel!.text! + " "
                 }
                 else {
                     if avg {
@@ -116,11 +141,16 @@ class ViewController: UIViewController {
                         value = cntNum
                     }
                 }
+                operation += " = \(value)"
+                history_.append(operation)
+                
                 setResult(value)
                 clear()
             }
             else{
                 setResult(val)
+                
+                op = btn.titleLabel!.text!
                 
                 if btn === cntBtn || btn === avgBtn {
                     fun = nil
@@ -160,8 +190,8 @@ class ViewController: UIViewController {
                     }
 
                 }
+                isSelectNumBtn = false
             }
-            isSelectNumBtn = false
         }
     }
     
@@ -193,7 +223,10 @@ class ViewController: UIViewController {
     }
     
     private func clear() {
+        isSelectNumBtn = true
         fun = nil
+        op = ""
+        operation = ""
         clearNum()
         hlbuttonStatus(eqlBtn)
         
