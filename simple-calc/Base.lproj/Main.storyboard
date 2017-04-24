@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,202 +19,300 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CvY-Th-Uj4" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                <rect key="frame" x="66" y="258" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="4"/>
-                                <connections>
-                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="izL-KN-CXA"/>
-                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q9g-oK-lrv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tf-27-uX7" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                <rect key="frame" x="134" y="258" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="5"/>
-                                <connections>
-                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="m29-n9-HRf"/>
-                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B5W-il-Mnv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNW-Bv-U1S" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                <rect key="frame" x="202" y="258" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="6"/>
-                                <connections>
-                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="1CB-8r-TlK"/>
-                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hfY-CX-wye"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytE-MK-zWs" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                <rect key="frame" x="271" y="258" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="-"/>
-                                <connections>
-                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="PUj-j7-FuV"/>
-                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6xM-ay-iPP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZb-HA-7cr" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                <rect key="frame" x="66" y="333" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="7"/>
-                                <connections>
-                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="G7e-0g-1Eo"/>
-                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V3I-JK-OdZ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D60-WL-h9y" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                <rect key="frame" x="202" y="333" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="9"/>
-                                <connections>
-                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="HgL-U5-3r5"/>
-                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bMb-1O-tY8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmq-WH-0qD" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                <rect key="frame" x="134" y="333" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="8"/>
-                                <connections>
-                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="th5-WV-zW3"/>
-                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sh3-fJ-XPS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ME-G2-GJH" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                <rect key="frame" x="271" y="333" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="*"/>
-                                <connections>
-                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="dix-pl-UXr"/>
-                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DuJ-DX-3XM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oif-qh-CkA" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                <rect key="frame" x="66" y="404" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="0"/>
-                                <connections>
-                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="6cC-Dj-mg3"/>
-                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="unI-kB-Mbd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQn-lB-50E" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                <rect key="frame" x="134" y="404" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <state key="normal" title="AC">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="d1L-AP-Phi"/>
-                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J8I-cf-YNu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VuC-Ro-qwl" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                <rect key="frame" x="202" y="404" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="%"/>
-                                <connections>
-                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="Xz4-O5-iJe"/>
-                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4UN-Qp-UHH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIJ-AH-ioj" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                <rect key="frame" x="271" y="404" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="/"/>
-                                <connections>
-                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="sqx-Rz-oPa"/>
-                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cO3-zy-rIU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4E-ws-WXO" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                <rect key="frame" x="66" y="475" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Count"/>
-                                <connections>
-                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="iQK-La-Sy3"/>
-                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7wx-u8-BVd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wui-8a-lq5" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                <rect key="frame" x="134" y="475" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Avg"/>
-                                <connections>
-                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="nDV-2f-pU0"/>
-                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hZU-mg-CPc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVJ-0E-JHF" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                <rect key="frame" x="202" y="475" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Fact"/>
-                                <connections>
-                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="1aD-Qp-C9Q"/>
-                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BYu-8h-PGg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uo1-Da-SPg" userLabel="btn3" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                <rect key="frame" x="202" y="186" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="3"/>
-                                <connections>
-                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="JSB-BP-rId"/>
-                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Khx-yc-4ga"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvT-CB-bCs" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                <rect key="frame" x="134" y="186" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="2"/>
-                                <connections>
-                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="WhE-JO-huY"/>
-                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZPX-Gh-kvT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vda-MR-fg2" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                <rect key="frame" x="271" y="186" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="+"/>
-                                <connections>
-                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="eY3-hC-Zrb"/>
-                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bKB-9M-LjE"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sif-PO-Xbz">
-                                <rect key="frame" x="66" y="76" width="255" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfV-Qq-tmD" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                <rect key="frame" x="271" y="475" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="="/>
-                                <connections>
-                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="oeI-r3-FNb"/>
-                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="coa-JP-6CT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1H-Dy-enI" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
-                                <rect key="frame" x="66" y="186" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="1"/>
-                                <connections>
-                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="G1z-Xt-LTi"/>
-                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CPo-KA-Qqj"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="M6Y-HF-Z3x">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZTl-i5-Ue9">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="78.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sif-PO-Xbz">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="78.5"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwm-ve-bYW">
+                                        <rect key="frame" x="0.0" y="78.5" width="320" height="78"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1H-Dy-enI" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="78"/>
+                                                <state key="normal" title="1"/>
+                                                <connections>
+                                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="G1z-Xt-LTi"/>
+                                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CPo-KA-Qqj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvT-CB-bCs" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
+                                                <rect key="frame" x="80" y="0.0" width="80" height="78"/>
+                                                <state key="normal" title="2"/>
+                                                <connections>
+                                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="WhE-JO-huY"/>
+                                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZPX-Gh-kvT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uo1-Da-SPg" userLabel="btn3" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
+                                                <rect key="frame" x="160" y="0.0" width="80" height="78"/>
+                                                <state key="normal" title="3"/>
+                                                <connections>
+                                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="JSB-BP-rId"/>
+                                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Khx-yc-4ga"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vda-MR-fg2" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
+                                                <rect key="frame" x="240" y="0.0" width="80" height="78"/>
+                                                <state key="normal" title="+"/>
+                                                <connections>
+                                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="eY3-hC-Zrb"/>
+                                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bKB-9M-LjE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="uo1-Da-SPg" firstAttribute="width" secondItem="r1H-Dy-enI" secondAttribute="width" id="NNM-Ud-gsq"/>
+                                            <constraint firstItem="tvT-CB-bCs" firstAttribute="height" secondItem="r1H-Dy-enI" secondAttribute="height" id="Nnb-Wf-y41"/>
+                                            <constraint firstItem="tvT-CB-bCs" firstAttribute="width" secondItem="r1H-Dy-enI" secondAttribute="width" id="ZES-Qi-Ps7"/>
+                                            <constraint firstItem="uo1-Da-SPg" firstAttribute="height" secondItem="r1H-Dy-enI" secondAttribute="height" id="kek-GN-OLg"/>
+                                            <constraint firstItem="vda-MR-fg2" firstAttribute="height" secondItem="r1H-Dy-enI" secondAttribute="height" id="nhK-XF-14n"/>
+                                            <constraint firstItem="vda-MR-fg2" firstAttribute="width" secondItem="r1H-Dy-enI" secondAttribute="width" id="pjz-ZX-FiG"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x8Y-G2-aUS">
+                                        <rect key="frame" x="0.0" y="156.5" width="320" height="78.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CvY-Th-Uj4" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="78.5"/>
+                                                <state key="normal" title="4"/>
+                                                <connections>
+                                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="izL-KN-CXA"/>
+                                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q9g-oK-lrv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tf-27-uX7" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
+                                                <rect key="frame" x="80" y="0.0" width="80" height="78.5"/>
+                                                <state key="normal" title="5"/>
+                                                <connections>
+                                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="m29-n9-HRf"/>
+                                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B5W-il-Mnv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNW-Bv-U1S" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
+                                                <rect key="frame" x="160" y="0.0" width="80" height="78.5"/>
+                                                <state key="normal" title="6"/>
+                                                <connections>
+                                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="1CB-8r-TlK"/>
+                                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hfY-CX-wye"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytE-MK-zWs" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
+                                                <rect key="frame" x="240" y="0.0" width="80" height="78.5"/>
+                                                <state key="normal" title="-"/>
+                                                <connections>
+                                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="PUj-j7-FuV"/>
+                                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6xM-ay-iPP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ytE-MK-zWs" firstAttribute="width" secondItem="CvY-Th-Uj4" secondAttribute="width" id="B1R-lr-HXn"/>
+                                            <constraint firstItem="mNW-Bv-U1S" firstAttribute="width" secondItem="CvY-Th-Uj4" secondAttribute="width" id="Cif-Jo-g4t"/>
+                                            <constraint firstItem="ytE-MK-zWs" firstAttribute="height" secondItem="CvY-Th-Uj4" secondAttribute="height" id="ELS-sO-XpB"/>
+                                            <constraint firstItem="7tf-27-uX7" firstAttribute="height" secondItem="CvY-Th-Uj4" secondAttribute="height" id="VyB-4c-Ytr"/>
+                                            <constraint firstItem="mNW-Bv-U1S" firstAttribute="height" secondItem="CvY-Th-Uj4" secondAttribute="height" id="Wb1-z3-ToB"/>
+                                            <constraint firstItem="7tf-27-uX7" firstAttribute="width" secondItem="CvY-Th-Uj4" secondAttribute="width" id="auc-GO-Kh2"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OvY-ch-zND">
+                                        <rect key="frame" x="0.0" y="235" width="320" height="78"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZb-HA-7cr" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="78"/>
+                                                <state key="normal" title="7"/>
+                                                <connections>
+                                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="G7e-0g-1Eo"/>
+                                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V3I-JK-OdZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmq-WH-0qD" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
+                                                <rect key="frame" x="80" y="0.0" width="79.5" height="78"/>
+                                                <state key="normal" title="8"/>
+                                                <connections>
+                                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="th5-WV-zW3"/>
+                                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sh3-fJ-XPS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D60-WL-h9y" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
+                                                <rect key="frame" x="159.5" y="0.0" width="80.5" height="78"/>
+                                                <state key="normal" title="9"/>
+                                                <connections>
+                                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="HgL-U5-3r5"/>
+                                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bMb-1O-tY8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ME-G2-GJH" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
+                                                <rect key="frame" x="240" y="0.0" width="80" height="78"/>
+                                                <state key="normal" title="*"/>
+                                                <connections>
+                                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="dix-pl-UXr"/>
+                                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DuJ-DX-3XM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="0ME-G2-GJH" firstAttribute="height" secondItem="xZb-HA-7cr" secondAttribute="height" id="3xh-n0-h02"/>
+                                            <constraint firstItem="jmq-WH-0qD" firstAttribute="width" secondItem="xZb-HA-7cr" secondAttribute="width" id="4h2-d1-3Yz"/>
+                                            <constraint firstItem="D60-WL-h9y" firstAttribute="width" secondItem="xZb-HA-7cr" secondAttribute="width" id="Do7-0f-fHJ"/>
+                                            <constraint firstItem="jmq-WH-0qD" firstAttribute="height" secondItem="xZb-HA-7cr" secondAttribute="height" id="hXw-UC-baJ"/>
+                                            <constraint firstItem="D60-WL-h9y" firstAttribute="height" secondItem="xZb-HA-7cr" secondAttribute="height" id="kZp-o3-KXI"/>
+                                            <constraint firstItem="0ME-G2-GJH" firstAttribute="width" secondItem="xZb-HA-7cr" secondAttribute="width" id="tTZ-P7-sWI"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTE-AI-GkL">
+                                        <rect key="frame" x="0.0" y="313" width="320" height="79"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oif-qh-CkA" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="80.5" height="79"/>
+                                                <state key="normal" title="0"/>
+                                                <connections>
+                                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="6cC-Dj-mg3"/>
+                                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="unI-kB-Mbd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQn-lB-50E" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
+                                                <rect key="frame" x="80.5" y="0.0" width="80" height="79"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <state key="normal" title="AC">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="d1L-AP-Phi"/>
+                                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J8I-cf-YNu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VuC-Ro-qwl" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
+                                                <rect key="frame" x="160.5" y="0.0" width="80" height="79"/>
+                                                <state key="normal" title="%"/>
+                                                <connections>
+                                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="Xz4-O5-iJe"/>
+                                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4UN-Qp-UHH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIJ-AH-ioj" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
+                                                <rect key="frame" x="240.5" y="0.0" width="79.5" height="79"/>
+                                                <state key="normal" title="/"/>
+                                                <connections>
+                                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="sqx-Rz-oPa"/>
+                                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cO3-zy-rIU"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="VuC-Ro-qwl" firstAttribute="height" secondItem="Oif-qh-CkA" secondAttribute="height" id="0Gs-1e-VWh"/>
+                                            <constraint firstItem="VuC-Ro-qwl" firstAttribute="width" secondItem="Oif-qh-CkA" secondAttribute="width" id="Mnr-f3-Ioc"/>
+                                            <constraint firstItem="lQn-lB-50E" firstAttribute="height" secondItem="Oif-qh-CkA" secondAttribute="height" id="Ube-aL-OYG"/>
+                                            <constraint firstItem="NIJ-AH-ioj" firstAttribute="width" secondItem="Oif-qh-CkA" secondAttribute="width" id="WuM-92-Cr2"/>
+                                            <constraint firstItem="lQn-lB-50E" firstAttribute="width" secondItem="Oif-qh-CkA" secondAttribute="width" id="h1S-cq-baA"/>
+                                            <constraint firstItem="NIJ-AH-ioj" firstAttribute="height" secondItem="Oif-qh-CkA" secondAttribute="height" id="j7g-gc-MiN"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yco-65-vWc">
+                                        <rect key="frame" x="0.0" y="392" width="320" height="77.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4E-ws-WXO" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="77.5"/>
+                                                <state key="normal" title="Count"/>
+                                                <connections>
+                                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="iQK-La-Sy3"/>
+                                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7wx-u8-BVd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wui-8a-lq5" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
+                                                <rect key="frame" x="80" y="0.0" width="80" height="77.5"/>
+                                                <state key="normal" title="Avg"/>
+                                                <connections>
+                                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="nDV-2f-pU0"/>
+                                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hZU-mg-CPc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVJ-0E-JHF" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
+                                                <rect key="frame" x="160" y="0.0" width="80" height="77.5"/>
+                                                <state key="normal" title="Fact"/>
+                                                <connections>
+                                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="1aD-Qp-C9Q"/>
+                                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BYu-8h-PGg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfV-Qq-tmD" customClass="RoundButton" customModule="simple_calc" customModuleProvider="target">
+                                                <rect key="frame" x="240" y="0.0" width="80" height="77.5"/>
+                                                <state key="normal" title="="/>
+                                                <connections>
+                                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="oeI-r3-FNb"/>
+                                                    <action selector="touchUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="coa-JP-6CT"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="bfV-Qq-tmD" firstAttribute="width" secondItem="X4E-ws-WXO" secondAttribute="width" id="2I0-MX-Y0g"/>
+                                            <constraint firstItem="Wui-8a-lq5" firstAttribute="height" secondItem="X4E-ws-WXO" secondAttribute="height" id="2au-ro-Vav"/>
+                                            <constraint firstItem="bfV-Qq-tmD" firstAttribute="height" secondItem="X4E-ws-WXO" secondAttribute="height" id="Eok-Jg-Wbo"/>
+                                            <constraint firstItem="lVJ-0E-JHF" firstAttribute="width" secondItem="X4E-ws-WXO" secondAttribute="width" id="dVV-XQ-Akw"/>
+                                            <constraint firstItem="lVJ-0E-JHF" firstAttribute="height" secondItem="X4E-ws-WXO" secondAttribute="height" id="itA-h1-q8v"/>
+                                            <constraint firstItem="Wui-8a-lq5" firstAttribute="width" secondItem="X4E-ws-WXO" secondAttribute="width" id="y2z-of-K7F"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRy-Vd-gtj">
+                                        <rect key="frame" x="0.0" y="469.5" width="320" height="78.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fl0-uv-lTn">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="78.5"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.1055222602739726" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="History"/>
+                                                <connections>
+                                                    <action selector="historyTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lhM-F5-N7r"/>
+                                                    <action selector="touchDownBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="Ty4-YM-slF"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="fl0-uv-lTn" firstAttribute="leading" secondItem="aRy-Vd-gtj" secondAttribute="leading" id="V03-If-b5C"/>
+                                            <constraint firstItem="fl0-uv-lTn" firstAttribute="top" secondItem="aRy-Vd-gtj" secondAttribute="top" id="dgN-H2-FZq"/>
+                                            <constraint firstAttribute="trailing" secondItem="fl0-uv-lTn" secondAttribute="trailing" id="kSe-nU-wka"/>
+                                            <constraint firstAttribute="bottom" secondItem="fl0-uv-lTn" secondAttribute="bottom" id="xAh-0L-9Q3"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="aRy-Vd-gtj" secondAttribute="trailing" id="1zb-ru-HDG"/>
+                                    <constraint firstItem="OvY-ch-zND" firstAttribute="height" secondItem="ZTl-i5-Ue9" secondAttribute="height" id="6sf-nE-poO"/>
+                                    <constraint firstItem="OvY-ch-zND" firstAttribute="width" secondItem="ZTl-i5-Ue9" secondAttribute="width" id="BsT-fu-5GR"/>
+                                    <constraint firstAttribute="bottom" secondItem="aRy-Vd-gtj" secondAttribute="bottom" id="CRc-Om-7hR"/>
+                                    <constraint firstItem="yco-65-vWc" firstAttribute="height" secondItem="ZTl-i5-Ue9" secondAttribute="height" id="Eh7-Bo-PhF"/>
+                                    <constraint firstItem="BTE-AI-GkL" firstAttribute="height" secondItem="ZTl-i5-Ue9" secondAttribute="height" id="JMB-oS-COj"/>
+                                    <constraint firstItem="x8Y-G2-aUS" firstAttribute="height" secondItem="ZTl-i5-Ue9" secondAttribute="height" id="SEi-d3-33g"/>
+                                    <constraint firstItem="aRy-Vd-gtj" firstAttribute="top" secondItem="yco-65-vWc" secondAttribute="bottom" id="TGH-R4-6NV"/>
+                                    <constraint firstItem="aRy-Vd-gtj" firstAttribute="leading" secondItem="M6Y-HF-Z3x" secondAttribute="leading" id="U2s-vE-Aak"/>
+                                    <constraint firstItem="yco-65-vWc" firstAttribute="width" secondItem="ZTl-i5-Ue9" secondAttribute="width" id="VBG-7a-1yW"/>
+                                    <constraint firstItem="bwm-ve-bYW" firstAttribute="width" secondItem="ZTl-i5-Ue9" secondAttribute="width" id="WuI-gR-xFX"/>
+                                    <constraint firstItem="BTE-AI-GkL" firstAttribute="width" secondItem="ZTl-i5-Ue9" secondAttribute="width" id="Xxu-1Y-ufp"/>
+                                    <constraint firstItem="aRy-Vd-gtj" firstAttribute="height" secondItem="yco-65-vWc" secondAttribute="height" id="be5-hK-W1Z"/>
+                                    <constraint firstItem="x8Y-G2-aUS" firstAttribute="width" secondItem="ZTl-i5-Ue9" secondAttribute="width" id="jSo-wc-Q61"/>
+                                    <constraint firstItem="bwm-ve-bYW" firstAttribute="height" secondItem="ZTl-i5-Ue9" secondAttribute="height" id="tzd-BW-qGG"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="M6Y-HF-Z3x" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="JDs-I2-tGn"/>
+                            <constraint firstAttribute="bottom" secondItem="M6Y-HF-Z3x" secondAttribute="bottom" id="ahG-FT-jxc"/>
+                            <constraint firstAttribute="trailing" secondItem="M6Y-HF-Z3x" secondAttribute="trailing" id="fHh-Dp-Qlv"/>
+                            <constraint firstItem="M6Y-HF-Z3x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pKI-TE-Vrg"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="acBtn" destination="lQn-lB-50E" id="Ebf-HZ-c1C"/>
@@ -237,11 +336,80 @@
                         <outlet property="mulBtn" destination="0ME-G2-GJH" id="UQz-39-SiF"/>
                         <outlet property="resLabel" destination="Sif-PO-Xbz" id="7bi-sh-LXG"/>
                         <outlet property="subBtn" destination="ytE-MK-zWs" id="bkb-ca-C8Q"/>
+                        <outlet property="view" destination="8bC-Xf-vdC" id="w9M-mq-xdb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
+            <point key="canvasLocation" x="199" y="50"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="uy8-hb-GQP">
+            <objects>
+                <viewController storyboardIdentifier="HistoryController" id="lyU-iE-b5R" customClass="HistoryViewController" customModule="simple_calc" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jYo-UC-h4Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="ETF-89-5PM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FTI-Hc-PBU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jpJ-mr-E72">
+                                <rect key="frame" x="0.0" y="28" width="320" height="463"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="d6R-zd-knw">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="463"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="d6R-zd-knw" secondAttribute="trailing" id="CSP-Wh-Idk"/>
+                                    <constraint firstAttribute="bottom" secondItem="d6R-zd-knw" secondAttribute="bottom" id="I2O-hm-ngH"/>
+                                    <constraint firstItem="d6R-zd-knw" firstAttribute="leading" secondItem="jpJ-mr-E72" secondAttribute="leading" id="mog-lT-WTo"/>
+                                    <constraint firstItem="d6R-zd-knw" firstAttribute="top" secondItem="jpJ-mr-E72" secondAttribute="top" id="rXE-xs-PVl"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xDF-w3-SEk">
+                                <rect key="frame" x="0.0" y="489.5" width="320" height="78.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86b-7J-MOa">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="78.5"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.10795697773972603" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Back"/>
+                                        <connections>
+                                            <action selector="backBtnOnClick:" destination="lyU-iE-b5R" eventType="touchUpInside" id="KGE-Wh-vYN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="86b-7J-MOa" firstAttribute="leading" secondItem="xDF-w3-SEk" secondAttribute="leading" id="7PY-zL-WD8"/>
+                                    <constraint firstItem="86b-7J-MOa" firstAttribute="top" secondItem="xDF-w3-SEk" secondAttribute="top" id="kUW-sK-W2v"/>
+                                    <constraint firstAttribute="trailing" secondItem="86b-7J-MOa" secondAttribute="trailing" id="mgM-ww-M1o"/>
+                                    <constraint firstAttribute="bottom" secondItem="86b-7J-MOa" secondAttribute="bottom" id="s0y-J3-mj5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ETF-89-5PM" firstAttribute="top" secondItem="xDF-w3-SEk" secondAttribute="bottom" id="68L-VT-VbA"/>
+                            <constraint firstItem="xDF-w3-SEk" firstAttribute="top" secondItem="jpJ-mr-E72" secondAttribute="bottom" id="EE9-4c-S2o"/>
+                            <constraint firstItem="xDF-w3-SEk" firstAttribute="height" secondItem="jpJ-mr-E72" secondAttribute="height" multiplier="1:6" id="Je1-AG-Y2E"/>
+                            <constraint firstItem="xDF-w3-SEk" firstAttribute="leading" secondItem="FTI-Hc-PBU" secondAttribute="leading" id="UDZ-JD-DlX"/>
+                            <constraint firstAttribute="trailing" secondItem="jpJ-mr-E72" secondAttribute="trailing" id="W0k-1h-Ieh"/>
+                            <constraint firstItem="xDF-w3-SEk" firstAttribute="top" secondItem="jpJ-mr-E72" secondAttribute="bottom" id="ZNq-kM-vLD"/>
+                            <constraint firstItem="jpJ-mr-E72" firstAttribute="leading" secondItem="FTI-Hc-PBU" secondAttribute="leading" id="ada-Oj-jm7"/>
+                            <constraint firstAttribute="trailing" secondItem="xDF-w3-SEk" secondAttribute="trailing" id="i4g-DY-0Ye"/>
+                            <constraint firstItem="jpJ-mr-E72" firstAttribute="top" secondItem="jYo-UC-h4Z" secondAttribute="bottom" id="y7f-Aq-unk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="stackView" destination="d6R-zd-knw" id="dLP-Aw-yAV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4tI-RX-CHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1102.5" y="43.309859154929576"/>
         </scene>
     </scenes>
 </document>

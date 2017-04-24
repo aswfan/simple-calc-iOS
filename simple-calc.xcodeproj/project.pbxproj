@@ -14,7 +14,9 @@
 		9D08CB8B1EA1678F00E9B488 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D08CB891EA1678F00E9B488 /* LaunchScreen.storyboard */; };
 		9D08CB961EA1678F00E9B488 /* simple_calcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D08CB951EA1678F00E9B488 /* simple_calcTests.swift */; };
 		9D08CBA11EA1678F00E9B488 /* simple_calcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D08CBA01EA1678F00E9B488 /* simple_calcUITests.swift */; };
+		9D114D8D1EAC28B8009750FD /* mathOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D114D8C1EAC28B8009750FD /* mathOperation.swift */; };
 		9DB13DF21EA4140A0029C025 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB13DF11EA4140A0029C025 /* RoundButton.swift */; };
+		9DB782421EAD5240003B9AF8 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB782411EAD5240003B9AF8 /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +50,9 @@
 		9D08CB9C1EA1678F00E9B488 /* simple-calcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "simple-calcUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D08CBA01EA1678F00E9B488 /* simple_calcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simple_calcUITests.swift; sourceTree = "<group>"; };
 		9D08CBA21EA1678F00E9B488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D114D8C1EAC28B8009750FD /* mathOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mathOperation.swift; sourceTree = "<group>"; };
 		9DB13DF11EA4140A0029C025 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		9DB782411EAD5240003B9AF8 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				9D08CB891EA1678F00E9B488 /* LaunchScreen.storyboard */,
 				9D08CB8C1EA1678F00E9B488 /* Info.plist */,
 				9DB13DF11EA4140A0029C025 /* RoundButton.swift */,
+				9D114D8C1EAC28B8009750FD /* mathOperation.swift */,
+				9DB782411EAD5240003B9AF8 /* HistoryViewController.swift */,
 			);
 			path = "simple-calc";
 			sourceTree = "<group>";
@@ -263,7 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DB13DF21EA4140A0029C025 /* RoundButton.swift in Sources */,
+				9D114D8D1EAC28B8009750FD /* mathOperation.swift in Sources */,
 				9D08CB831EA1678F00E9B488 /* ViewController.swift in Sources */,
+				9DB782421EAD5240003B9AF8 /* HistoryViewController.swift in Sources */,
 				9D08CB811EA1678F00E9B488 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

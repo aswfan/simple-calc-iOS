@@ -13,12 +13,29 @@ class ViewController: UIViewController {
     let screenWidth = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
     
+    private var history_: [String] = []
+    private var operation: String = ""
+    private var op: String = ""
+    
+    var history: [String] {
+        get {
+            return self.history_
+        }
+    }
+    
     var value: Int = 0
-    var count = 0
-    var input = false
+    var val = 0
+    
     var avg = false
+    var avgNum = 0
+    
     var cnt = false
+    var cntNum = 0
+    
+    var changeOperator = false
     var fun: ((Int, Int) -> (Bool, Int))? = nil
+    
+    var isSelectNumBtn = true
     
     var hlBtn: RoundButton? = nil
     
@@ -45,6 +62,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var resLabel: UILabel!
     
+    @IBAction func historyTouchUp(_ sender: RoundButton) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc: HistoryViewController = sb.instantiateViewController(withIdentifier: "HistoryController") as! HistoryViewController
+        
+        vc.superController = self
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     @IBAction func touchDownBtn(_ sender: Any) {
         if let btn = sender as? RoundButton {
             btn.backgroundColor = UIColor.init(red: 32/255, green: 184/255, blue: 252/255, alpha: 0.5)
@@ -56,8 +81,125 @@ class ViewController: UIViewController {
             return
         }
         
+        let mo = mathOperation()
+        
         let btn = sender as! RoundButton
         
+        hlbuttonStatus(btn)
+        
+//        var val = Int(resLabel.text!)!
+        
+        if btn === acBtn {
+            clear()
+            val = 0
+            setResult(0)
+        }
+        else if btn === btn1 || btn === btn2 || btn === btn3 || btn === btn4 || btn === btn5 ||
+            btn === btn6 || btn === btn7 || btn === btn8 || btn === btn9 || btn === btn0 {
+            
+            if !isSelectNumBtn {
+                if operation == "" {
+                    operation += String(value)
+                }
+                operation += " " + op + " "
+            }
+            
+            isSelectNumBtn = true
+            
+            let digit = btn.titleLabel!.text!
+            val = val * 10  + Int (digit)!
+            setResult(val)
+            
+            operation += digit
+        }
+        else {
+            
+            if isSelectNumBtn {
+                value = mo.operation(left: value, right: val, fun: fun)
+                val = 0
+            }
+            
+            if btn === eqlBtn || btn === factBtn {
+                
+                if btn === factBtn {
+                    value = mo.fact(a: value)
+                    
+                    operation += " " + btn.titleLabel!.text! + " "
+                }
+                else {
+                    if avg {
+                        if isSelectNumBtn {
+                            avgNum += 1
+                        }
+                        value = value/avgNum
+                    }
+                    
+                    if cnt {
+                        if isSelectNumBtn {
+                            cntNum += 1
+                        }
+                        value = cntNum
+                    }
+                }
+                operation += " = \(value)"
+                history_.append(operation)
+                
+                setResult(value)
+                clear()
+            }
+            else{
+                setResult(val)
+                
+                op = btn.titleLabel!.text!
+                
+                if btn === cntBtn || btn === avgBtn {
+                    fun = nil
+                    
+                    if btn === cntBtn {
+                        cnt = true
+                        if isSelectNumBtn {
+                            cntNum += 1
+                        }
+                    }
+                    else {
+                        avg = true
+                        if isSelectNumBtn {
+                            avgNum += 1
+                        }
+                        
+                        fun = mo.add(a:b:)
+                    }
+                }
+                else {
+                    clearNum()
+                    
+                    if btn === addBtn {
+                        fun = mo.add(a:b:)
+                    }
+                    else if btn === subBtn {
+                        fun = mo.sub(a:b:)
+                    }
+                    else if btn === mulBtn {
+                        fun = mo.mul(a:b:)
+                    }
+                    else if btn === divBtn {
+                        fun = mo.div(a:b:)
+                    }
+                    else if btn === modBtn {
+                        fun = mo.mod(a:b:)
+                    }
+
+                }
+                isSelectNumBtn = false
+            }
+        }
+    }
+    
+    private func setResult(_ res: Int) {
+        resLabel.text = String(res)
+    }
+    
+    private func hlbuttonStatus(_ btn: RoundButton) {
         if btn === eqlBtn {
             hlBtn?.backgroundColor = UIColor.white
         }
@@ -71,93 +213,27 @@ class ViewController: UIViewController {
                 hlBtn = btn
             }
         }
-        
-        var val = Int(resLabel.text!)!
-        
-        if btn == cntBtn || btn === avgBtn {
-            if btn == cntBtn {
-                cnt = true
-            }else {
-                avg = true
-            }
-            count += 1
-        }
-        
-        switch btn {
-        case avgBtn, addBtn:
-            value = operation(left: value, right: val, fun: fun)
-            fun = add
-        case subBtn:
-            value = operation(left: value, right: val, fun: fun)
-            fun = sub
-        case mulBtn:
-            value = operation(left: value, right: val, fun: fun)
-            fun = mul
-        case divBtn:
-            value = operation(left: value, right: val, fun: fun)
-            fun = div
-        case modBtn:
-            value = operation(left: value, right: val, fun: fun)
-            fun = mod
-        case cntBtn:
-            value = val
-        case factBtn:
-            value = operation(left: value, right: val, fun: fun)
-            value = fact(a: value)
-        case eqlBtn:
-            if avg || cnt {
-                count += 1
-            }
-            value = operation(left: value, right: val, fun: fun)
-        case acBtn:
-            val = 0
-            value = 0
-            clear()
-        default:
-            if input {
-                val = 0
-            }
-            val = val * 10 + Int((btn.titleLabel?.text)!)!
-        }
-        
-        if btn === factBtn {
-            resLabel.text = String(value)
-        }else if btn === eqlBtn {
-            if avg || cnt{
-                if avg {
-                    resLabel.text = String(value/Int(count))
-                    avg = !avg
-                }else {
-                    resLabel.text = String(count)
-                    cnt = !cnt
-                }
-                count = 0
-            }else {
-                resLabel.text = String(value)
-            }
-            
-            clear()
-            
-        }else {
-            resLabel.text = String(val)
-        }
-        
-        if btn === btn0 || btn === btn1 || btn === btn2 || btn === btn3 ||
-            btn === btn4 || btn === btn5 || btn === btn6 || btn === btn7 ||
-            btn === btn8 || btn === btn9 {
-            input = false
-        }else {
-            input = true
-        }
-        
+    }
+    
+    private func clearNum() {
+        avgNum = 0
+        cntNum = 0
+        cnt = false
+        avg = false
     }
     
     private func clear() {
-        count = 0
-        input = false
-        cnt = false
-        avg = false
+        isSelectNumBtn = true
         fun = nil
+        op = ""
+        operation = ""
+        clearNum()
+        hlbuttonStatus(eqlBtn)
+        
+    }
+    
+    private func addHistory () {
+        
     }
     
     
@@ -175,57 +251,7 @@ class ViewController: UIViewController {
     }
     
     
-    private func operation(left a: Int, right b: Int, fun: ((Int, Int) -> (Bool, Int))?) -> Int {
-        if let f = fun {
-            return f(a, b).1
-        }else {
-            return b
-        }
-    }
     
-    private func add(a: Int, b: Int) -> (Bool, Int) {
-        return (true, a + b)
-    }
-    
-    private func sub(a: Int, b: Int) -> (Bool, Int) {
-        return (true, a - b)
-    }
-    
-    private func mul(a: Int, b: Int) -> (Bool, Int) {
-        return (true, a * b)
-    }
-    
-    private func div(a: Int, b: Int) -> (Bool, Int) {
-        if b == 0 {
-            print("Illegal input: Int division or modulo by zero")
-            return (false, 0)
-        }
-        return (true, a / b)
-    }
-    
-    private func mod(a: Int, b: Int) -> (Bool, Int) {
-        if b == 0 {
-            print("Illegal input: Int division or modulo by zero")
-            return (false, 0)
-        }
-        return (true, a % b)
-    }
-    
-    private func fact(a: Int) -> Int {
-        var result: Int = 1
-        for i in 1...a {
-            if !Int.multiplyWithOverflow(result, i).1 {
-                result *= i
-            }else {
-                result = 0
-                print("Error: Integer Overflow!")
-                break;
-            }
-            
-        }
-        return result
-    }
-
 
 }
 
